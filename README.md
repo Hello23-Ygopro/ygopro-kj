@@ -5,7 +5,8 @@
 </p>
 
 ## How to play
-1. Start `ygopro_vs_links.exe`.
+1. Start `ygopro_vs.exe`.<br>
+Note: If YGOPro crashes between games, start `ygopro_vs_lan_fix.exe` instead.
 2. Click on `Deck Management` to build your deck. Remember to add 1 _Kaijudo Rules_!<br>
 3. At the start of the game, take 5 cards from the top of your deck without [looking](https://duelmasters.fandom.com/wiki/Look) at them and put them in a row in front of you face down. These face down cards are your [shields](https://kaijudo.wikia.com/wiki/Shield). (You can only have a maximum of 5 shields in YGOPro.) Then [draw](https://kaijudo.fandom.com/wiki/Draw) 5 cards. There is no limit to the number of cards you can have in your hand.
 4. During your Beginning Phase, [untap](https://kaijudo.fandom.com/wiki/Tap_(Untap)) all your [tapped](https://kaijudo.fandom.com/wiki/Tap_(Untap)) creatures in the [battle zone](https://kaijudo.fandom.com/wiki/Battle_Zone) and tapped cards in your [mana zone](https://kaijudo.fandom.com/wiki/Mana_Zone). Then draw 1 card. The person who plays first skips drawing a card on their first turn.
@@ -15,9 +16,10 @@
 8. During your End Phase, resolve any [abilities](https://kaijudo.fandom.com/wiki/Card_Abilities) that trigger "at the end of your turn". Then your turn ends.
 
 **Important:**
-1. Online play is not supported.
-2. At least 1 player must have _Kaijudo Rules_ in their deck, otherwise the mod will not function properly.
-3. YGOPro does not allow you to look at a tapped card in your opponent's mana zone that was put there from a [Private Zone](https://duelmasters.fandom.com/wiki/Private_Zone). You will be able to look at it when it untaps, or is put into a [Public Zone](https://duelmasters.fandom.com/wiki/Public_Zone).
+1. This YGOPro game is only compatible with the Microsoft Windows operating system.
+2. Online play is not supported.
+3. At least 1 player must have _Kaijudo Rules_ in their deck, otherwise the mod will not function properly.
+4. YGOPro does not allow you to look at a tapped card in your opponent's mana zone that was put there from a [Private Zone](https://duelmasters.fandom.com/wiki/Private_Zone). You will be able to look at it when it untaps, or is put into a [Public Zone](https://duelmasters.fandom.com/wiki/Public_Zone).
 
 ## How to win
 1. Attack your opponent with a creature that is not [blocked](https://kaijudo.fandom.com/wiki/Block) or removed when they have no shields left.
