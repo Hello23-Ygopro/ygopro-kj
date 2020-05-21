@@ -5,8 +5,7 @@
 </p>
 
 ## How to play
-1. Start `ygopro_vs.exe`.<br>
-Note: If YGOPro crashes between games, start `ygopro_vs_lan_fix.exe` instead.
+1. Start `ygopro.exe`.
 2. Click on `Deck Management` to build your deck. Remember to add 1 _Kaijudo Rules_!<br>
 3. At the start of the game, take 5 cards from the top of your deck without [looking](https://duelmasters.fandom.com/wiki/Look) at them and put them in a row in front of you face down. These face down cards are your [shields](https://kaijudo.wikia.com/wiki/Shield). (You can only have a maximum of 5 shields in YGOPro.) Then [draw](https://kaijudo.fandom.com/wiki/Draw) 5 cards. There is no limit to the number of cards you can have in your hand.
 4. During your Beginning Phase, [untap](https://kaijudo.fandom.com/wiki/Tap_(Untap)) all your [tapped](https://kaijudo.fandom.com/wiki/Tap_(Untap)) creatures in the [battle zone](https://kaijudo.fandom.com/wiki/Battle_Zone) and tapped cards in your [mana zone](https://kaijudo.fandom.com/wiki/Mana_Zone). Then draw 1 card. The person who plays first skips drawing a card on their first turn.
