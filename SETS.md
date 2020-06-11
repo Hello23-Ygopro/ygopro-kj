@@ -1,4 +1,9 @@
-# Kaijudo TCG [Sets](https://kaijudo.fandom.com/wiki/Trading_Card_Game)
+# Kaijudo TCG [Sets](https://kaijudo.fandom.com/wiki/Block_(TCG_sets))
+
+## ID Map
+- `10000XXX` : System
+- `10XXXYYY` : Decks, Booster Packs
+- `10XXXXX` : Promotional Cards
 
 ## Decks & Booster Packs
 - ~**June 26, 2012** : Tatsurion vs. Razorkinder Battle Decks (1TVR) : `10001XXX`~

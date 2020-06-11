@@ -70,6 +70,7 @@
 - `0x10	Graveyard` = Mana Zone (untapped cards)
 - `0x20	Banished` = Mana Zone (tapped cards) (text color = blue)
 - `0x20	Banished` = [Discard Pile](https://kaijudo.fandom.com/wiki/Discard_Pile) (text color = black)
+- `0x80	Xyz Material` = [Evolution Source](https://duelmasters.fandom.com/wiki/Evolution_Source)
 </details>
 <details>
 <summary>Phase</summary>
