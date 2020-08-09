@@ -33,7 +33,7 @@ function scard.op2(e,tp,eg,ep,ev,re,r,rp)
 end
 --[[
 	Rulings
-		Q: If I have no cards in my hand when I use "Brazen Tactics," can I draw 2 cards?
+	Q: If I have no cards in my hand when I use "Brazen Tactics," can I draw 2 cards?
 		A: Yes. Even if you have no cards in your hand, you can still choose to discard your hand.
-		https://kaijudo.fandom.com/wiki/Rygar_the_Tank/Rulings
+	https://kaijudo.fandom.com/wiki/Rygar_the_Tank/Rulings
 ]]

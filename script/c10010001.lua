@@ -35,6 +35,6 @@ function scard.op2(e,tp,eg,ep,ev,re,r,rp)
 end
 --[[
 	References
-		1. W Nebula Meteorite
-		https://github.com/Fluorohydride/ygopro-scripts/blob/db63e8c/c90075978.lua#L23
+	* W Nebula Meteorite
+	https://github.com/Fluorohydride/ygopro-scripts/blob/db63e8c/c90075978.lua#L23
 ]]

@@ -22,7 +22,7 @@ function scard.op1(e,tp,eg,ep,ev,re,r,rp)
 end
 --[[
 	Rulings
-		Q: Can my opponent untap the creature with a spell or a creature's ability?
+	Q: Can my opponent untap the creature with a spell or a creature's ability?
 		A: Yes. "Solar Flare" only stops the creature from untapping at the start of your opponent's next turn.
-		https://kaijudo.fandom.com/wiki/Lyra,_the_Blazing_Sun/Rulings
+	https://kaijudo.fandom.com/wiki/Lyra,_the_Blazing_Sun/Rulings
 ]]

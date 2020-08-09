@@ -55,8 +55,8 @@ function scard.tg1(e,c)
 end
 --[[
 	References
-		1. Ogre of the Scarlet Sorrow
-		https://github.com/Fluorohydride/ygopro-scripts/blob/2c4f0ca/c82670878.lua#L23
-		2. Confusion Chaff
-		https://github.com/Fluorohydride/ygopro-scripts/blob/2c4f0ca/c67630339.lua#L10
+	* Confusion Chaff
+	https://github.com/Fluorohydride/ygopro-scripts/blob/2c4f0ca/c67630339.lua#L10
+	* Ogre of the Scarlet Sorrow
+	https://github.com/Fluorohydride/ygopro-scripts/blob/2c4f0ca/c82670878.lua#L23
 ]]

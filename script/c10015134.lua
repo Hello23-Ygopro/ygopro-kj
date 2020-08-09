@@ -44,9 +44,9 @@ function scard.tg1(e,c)
 end
 --[[
 	Rulings
-		Q: If Jarbala Hatchery is the first creature I summon in a turn, does "Abounding Essence" apply to the next
-		creature I summon?
+	Q: If Jarbala Hatchery is the first creature I summon in a turn, does "Abounding Essence" apply to the next creature
+	I summon?
 		A: Yes. That creature will be the second creature you summon that turn. The ability will consider the entire turn,
 		even if Jarbala Hatchery wasn't in the battle zone for part of that turn.
-		https://kaijudo.fandom.com/wiki/Jarbala_Hatchery/Rulings
+	https://kaijudo.fandom.com/wiki/Jarbala_Hatchery/Rulings
 ]]

@@ -63,7 +63,7 @@ function scard.op1(e,tp,eg,ep,ev,re,r,rp)
 end
 --[[
 	Rulings
-		Q: Does "Reimage" affect spells I cast using "Shield Blast"?
+	Q: Does "Reimage" affect spells I cast using "Shield Blast"?
 		A: No. When you cast a spell using "Shield Blast," it isn't cast from your hand.
-		http://kaijudo.wikia.com/wiki/Krotork_the_Mirror/Rulings
+	https://kaijudo.wikia.com/wiki/Krotork_the_Mirror/Rulings
 ]]

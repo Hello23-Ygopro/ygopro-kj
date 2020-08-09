@@ -26,9 +26,8 @@ function scard.op1(e,tp,eg,ep,ev,re,r,rp)
 end
 --[[
 	Rulings
-		Q: Will "Strong Arm" affect creatures that weren't in the battle zone when Cyber Lord Wakiki entered the battle
-		zone?
+	Q: Will "Strong Arm" affect creatures that weren't in the battle zone when Cyber Lord Wakiki entered the battle zone?
 		A: Yes. If your opponent somehow puts creatures into the battle zone later during the same turn that this creature
 		entered the battle zone, those creatures also won't untap at the start of your opponent's next turn.
-		https://kaijudo.fandom.com/wiki/Cyber_Lord_Wakiki/Rulings
+	https://kaijudo.fandom.com/wiki/Cyber_Lord_Wakiki/Rulings
 ]]

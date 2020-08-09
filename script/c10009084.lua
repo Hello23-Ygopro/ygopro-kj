@@ -21,7 +21,7 @@ function scard.op1(e,tp,eg,ep,ev,re,r,rp)
 end
 --[[
 	Rulings
-		Q: Can I use "Rekindle" if I have no cards in my hand?
+	Q: Can I use "Rekindle" if I have no cards in my hand?
 		A: Yes. You won't discard any cards, but you'll still get to draw 5 cards.
-		https://kaijudo.fandom.com/wiki/Forgelord_Vesuvius/Rulings
+	https://kaijudo.fandom.com/wiki/Forgelord_Vesuvius/Rulings
 ]]

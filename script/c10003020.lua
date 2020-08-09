@@ -33,8 +33,8 @@ function scard.op1(e,tp,eg,ep,ev,re,r,rp)
 end
 --[[
 	Rulings
-		Q: Do my creatures actually lose "Guard" or "Skirmisher"?
+	Q: Do my creatures actually lose "Guard" or "Skirmisher"?
 		A: No, your creatures will still have those abilities. You'll just ignore them when choosing your attacking
 		creatures.
-		https://kaijudo.fandom.com/wiki/Rally_the_Reserves/Rulings
+	https://kaijudo.fandom.com/wiki/Rally_the_Reserves/Rulings
 ]]

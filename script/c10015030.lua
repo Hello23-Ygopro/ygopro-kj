@@ -35,8 +35,8 @@ function scard.op1(e,tp,eg,ep,ev,re,r,rp)
 end
 --[[
 	Rulings
-		Q: If 2 or more of my shields are broken at the same time, say because I was attacked by a creature that has
-		"Double Breaker," can I use "Shield Saver" to save all of them?
+	Q: If 2 or more of my shields are broken at the same time, say because I was attacked by a creature that has
+	"Double Breaker," can I use "Shield Saver" to save all of them?
 		A: No. You can save only one shield using the "Shield Saver" ability.
-		https://kaijudo.fandom.com/wiki/Zephyr_Keeper/Rulings
+	https://kaijudo.fandom.com/wiki/Zephyr_Keeper/Rulings
 ]]

@@ -18,7 +18,7 @@ function scard.op1(e,tp,eg,ep,ev,re,r,rp)
 end
 --[[
 	Rulings
-		Q: Can I cast Blade Barrier targeting an enemy creature that's already tapped?
+	Q: Can I cast Blade Barrier targeting an enemy creature that's already tapped?
 		A: Yes. If you do, that creature won't untap at the start of your opponent's next turn.
-		https://kaijudo.fandom.com/wiki/Blade_Barrier/Rulings
+	https://kaijudo.fandom.com/wiki/Blade_Barrier/Rulings
 ]]

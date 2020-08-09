@@ -27,6 +27,6 @@ function scard.op1(e,tp,eg,ep,ev,re,r,rp)
 end
 --[[
 	References
-		1. Gishki Diviner
-		https://github.com/Fluorohydride/ygopro-scripts/blob/2bfd0c7/c72403299.lua#L23
+	* Gishki Diviner
+	https://github.com/Fluorohydride/ygopro-scripts/blob/2bfd0c7/c72403299.lua#L23
 ]]

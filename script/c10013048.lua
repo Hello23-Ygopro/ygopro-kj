@@ -38,9 +38,9 @@ function scard.op1(e,tp,eg,ep,ev,re,r,rp)
 end
 --[[
 	Rulings
-		Q: Say I summon this creature after having drawn a card for my turn. If I draw a card later that turn, can I use
-		"Sift for Treasure"?
+	Q: Say I summon this creature after having drawn a card for my turn. If I draw a card later that turn, can I use
+	"Sift for Treasure"?
 		A: No. "Sift for Treasure" looks at the entire turn to see if it's the first time you would draw a card during
 		that turn, even if this creature wasn't in the battle zone at the time.
-		https://kaijudo.fandom.com/wiki/Scavenging_Cenophor/Rulings
+	https://kaijudo.fandom.com/wiki/Scavenging_Cenophor/Rulings
 ]]

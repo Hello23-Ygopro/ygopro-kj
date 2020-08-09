@@ -140,7 +140,7 @@ function Auxiliary.AddSetcode(c,setname)
 		Duel.RegisterEffect(e2,0)
 	end
 end
---add to a card the race(s) that is written on it
+--register a card's race(s)
 --required for Card.KJIsRace
 function Auxiliary.AddRace(c,...)
 	if c:IsStatus(STATUS_COPYING_EFFECT) then return end
@@ -156,7 +156,7 @@ function Auxiliary.AddRace(c,...)
 		end
 	end
 end
---add to a card the race category(s) that is written on it
+--register a card's race category(s)
 --required for Card.IsRaceCategory
 function Auxiliary.AddRaceCategory(c,...)
 	if c:IsStatus(STATUS_COPYING_EFFECT) then return end
@@ -172,7 +172,7 @@ function Auxiliary.AddRaceCategory(c,...)
 		end
 	end
 end
---add to a card the name category(s) that is written on it
+--register a card's name category(s)
 --required for Card.IsNameCategory
 function Auxiliary.AddNameCategory(c,...)
 	if c:IsStatus(STATUS_COPYING_EFFECT) then return end
@@ -241,7 +241,7 @@ function Auxiliary.SortDeck(sort_player,target_player,count,seq)
 	else Duel.MoveSequence(g:GetFirst(),seq) end
 end
 
---creature card summon procedure and rules
+--creature card
 function Auxiliary.EnableCreatureAttribute(c)
 	--register card info
 	Auxiliary.RegisterCardInfo(c)
@@ -562,7 +562,7 @@ function Auxiliary.EvolutionOperation2(f1,f2)
 			end
 end
 
---spell card rules
+--spell card
 function Auxiliary.EnableSpellAttribute(c)
 	--register card info
 	Auxiliary.RegisterCardInfo(c)
@@ -1785,7 +1785,7 @@ function Auxiliary.TrapperOperation(e,tp,eg,ep,ev,re,r,rp)
 		Duel.SendtoMZone(tc,POS_FACEUP_UNTAPPED,REASON_EFFECT)
 	end
 end
---operation function for abilities that target cards
+--operation for abilities that target cards
 --f: Duel.KJBanish to banish cards
 --f: Duel.SendtoDeck to send cards to the deck
 --f: Duel.SendtoMZone to send cards to the mana zone
@@ -1801,7 +1801,7 @@ function Auxiliary.TargetCardsOperation(f,...)
 			end
 end
 --Banish
---operation function for abilities that banish cards
+--operation for abilities that banish cards
 function Auxiliary.BanishOperation(p,f,s,o,min,max,ex,...)
 	--p,min,max: nil to banish all cards
 	local ext_params={...}
@@ -1822,7 +1822,7 @@ function Auxiliary.BanishOperation(p,f,s,o,min,max,ex,...)
 				end
 			end
 end
---target function for abilities that target any number of creatures that have total power N000 or less
+--target for abilities that target any number of creatures that have total power N000 or less
 function Auxiliary.TargetTotalPowerBelowFilter(c,e,pwr,f,...)
 	return c:IsFaceup() and c:IsPowerAbove(0) and c:IsPowerBelow(pwr)
 		and c:IsCanBeEffectTarget(e) and (not f or f(c,e,pwr,...))
@@ -1851,7 +1851,7 @@ function Auxiliary.TargetTotalPowerBelowTarget(p,s,o,pwr,desc,f,ex,...)
 			end
 end
 --Shield Break
---operation function for abilities that break shields
+--operation for abilities that break shields
 function Auxiliary.BreakOperation(sp,tgp,min,max,rc)
 	--rc: the creature that breaks the shield
 	--sp,min,max: nil to break all shields
@@ -1866,7 +1866,7 @@ function Auxiliary.BreakOperation(sp,tgp,min,max,rc)
 			end
 end
 --Cast For Free
---operation function for abilities that cast spells for no cost
+--operation for abilities that cast spells for no cost
 function Auxiliary.CastOperation(p,f,s,o,min,max,ex,...)
 	--p,min,max: nil to cast all spells for no cost
 	local ext_params={...}
@@ -1886,7 +1886,7 @@ function Auxiliary.CastOperation(p,f,s,o,min,max,ex,...)
 			end
 end
 --Clash
---target function for abilities that let a player clash with their opponent
+--target for abilities that let a player clash with their opponent
 function Auxiliary.ClashTarget(p)
 	--p: the player who initiates the clash (PLAYER_SELF or PLAYER_OPPO)
 	return	function(e,tp,eg,ep,ev,re,r,rp,chk)
@@ -1895,7 +1895,7 @@ function Auxiliary.ClashTarget(p)
 			end
 end
 --Shield Peek, Peeping
---operation function for abilities that let a player look at cards that are not public knowledge
+--operation for abilities that let a player look at cards that are not public knowledge
 function Auxiliary.ConfirmOperation(p,f,s,o,min,max,ex,...)
 	--f: include Card.IsFacedown for LOCATION_SZONE, not Card.IsPublic for LOCATION_HAND
 	--p,min,max: nil to look at all cards
@@ -1917,7 +1917,7 @@ function Auxiliary.ConfirmOperation(p,f,s,o,min,max,ex,...)
 				end
 			end
 end
---operation function for abilities that let a player look at cards from the top of the deck
+--operation for abilities that let a player look at cards from the top of the deck
 function Auxiliary.DecktopConfirmOperation(p,ct)
 	--p: the player whose cards to look at (PLAYER_SELF, PLAYER_OPPO, or PLAYER_ALL)
 	--ct: the number of cards to look at
@@ -1938,7 +1938,7 @@ function Auxiliary.DecktopConfirmOperation(p,ct)
 			end
 end
 --Card Discard
---operation function for abilities that discard cards
+--operation for abilities that discard cards
 function Auxiliary.DiscardOperation(p,f,s,o,min,max,ram,ex,...)
 	--p,min,max: nil to discard all cards
 	--ram: true to discard cards at random
@@ -2012,7 +2012,7 @@ function Auxiliary.DrawOperation(p,ct)
 				end
 			end
 end
---operation function for abilities that draw up to a number of cards
+--operation for abilities that draw up to a number of cards
 --use Auxiliary.DrawTarget for the target function, if needed
 function Auxiliary.DrawUpToOperation(p,ct)
 	return	function(e,tp,eg,ep,ev,re,r,rp)
@@ -2065,7 +2065,7 @@ function Auxiliary.SendtoBZoneOperation(p,f,s,o,min,max,pos,ex,...)
 				end
 			end
 end
---operation function for abilities that send cards from the top of a player's deck to the battle zone
+--operation for abilities that send cards from the top of a player's deck to the battle zone
 --use Auxiliary.CheckDeckFunction for the target function, if needed
 function Auxiliary.DecktopSendtoBZoneOperation(p,f,ct,min,max,seq,conf_deck,pos,ex,...)
 	--p: the player whose cards to look at (PLAYER_SELF or PLAYER_OPPO)
@@ -2105,7 +2105,7 @@ function Auxiliary.DecktopSendtoBZoneOperation(p,f,ct,min,max,seq,conf_deck,pos,
 			end
 end
 --Deck Feed
---operation function for abilities that send cards to the deck
+--operation for abilities that send cards to the deck
 function Auxiliary.SendtoDeckOperation(p,f,s,o,min,max,seq,ex,...)
 	--p,min,max: nil to send all cards to the deck
 	--seq: where to send the cards (SEQ_DECK)
@@ -2151,7 +2151,7 @@ function Auxiliary.DecktopKJSendtoDPileOperation(p,ct)
 			end
 end
 --Put Into Hand
---operation function for abilities that send cards to the hand
+--operation for abilities that send cards to the hand
 function Auxiliary.SendtoHandOperation(p,f,s,o,min,max,conf,ex,...)
 	--p,min,max: nil to send all cards to the hand
 	--conf: true to reveal cards added from the deck
@@ -2188,7 +2188,7 @@ function Auxiliary.SendtoHandOperation(p,f,s,o,min,max,conf,ex,...)
 				if og4:GetCount()>0 then Duel.ConfirmCards(tp,og4) end
 			end
 end
---operation function for abilities that target cards to send to the hand
+--operation for abilities that target cards to send to the hand
 function Auxiliary.TargetSendtoHandOperation(e,tp,eg,ep,ev,re,r,rp)
 	local g=Duel.GetChainInfo(0,CHAININFO_TARGET_CARDS):Filter(Card.IsRelateToEffect,nil,e)
 	if g:GetCount()==0 or Duel.SendtoHand(g,PLAYER_OWNER,REASON_EFFECT)==0 then return end
@@ -2201,7 +2201,7 @@ function Auxiliary.TargetSendtoHandOperation(e,tp,eg,ep,ev,re,r,rp)
 	if og1:GetCount()>0 then Duel.ConfirmCards(1-tp,og1) end
 	if og2:GetCount()>0 then Duel.ConfirmCards(tp,og2) end
 end
---operation function for abilities that send cards from the top of a player's deck to the hand
+--operation for abilities that send cards from the top of a player's deck to the hand
 function Auxiliary.DecktopSendtoHandOperation(p,f,ct,min,max,seq,conf_deck,conf_add,ex,...)
 	--p: the player whose cards to look at (PLAYER_SELF or PLAYER_OPPO)
 	--ct: the number of cards to look at
@@ -2242,7 +2242,7 @@ function Auxiliary.DecktopSendtoHandOperation(p,f,ct,min,max,seq,conf_deck,conf_
 			end
 end
 --Mana Feed
---operation function for abilities that send cards to the mana zone (untapped)
+--operation for abilities that send cards to the mana zone (untapped)
 function Auxiliary.SendtoMZoneOperation(p,f,s,o,min,max,ex,...)
 	--p,min,max: nil to send all cards to the mana zone
 	local ext_params={...}
@@ -2304,7 +2304,7 @@ function Auxiliary.DecktopSendtoSZoneOperation(p,ct)
 			end
 end
 --Sort
---operation function for abilities that let a player look at the top cards of a player's deck and return them in any order
+--operation for abilities that let a player look at the top cards of a player's deck and return them in any order
 --use Auxiliary.CheckDeckFunction for the target function, if needed
 function Auxiliary.SortDecktopOperation(sortp,tgp,ct)
 	--sortp: the player who sorts the cards (PLAYER_SELF or PLAYER_OPPO)
@@ -2320,7 +2320,7 @@ function Auxiliary.SortDecktopOperation(sortp,tgp,ct)
 			end
 end
 --Tap, Untap
---operation function for abilities that tap cards
+--operation for abilities that tap cards
 function Auxiliary.TapOperation(p,f,s,o,min,max,ex,...)
 	--p,min,max: nil to tap all cards
 	local ext_params={...}
@@ -2343,7 +2343,7 @@ function Auxiliary.TapOperation(p,f,s,o,min,max,ex,...)
 				end
 			end
 end
---operation function for abilities that untap cards
+--operation for abilities that untap cards
 function Auxiliary.UntapOperation(p,f,s,o,min,max,ex,...)
 	--p,min,max: nil to untap all cards
 	local ext_params={...}
@@ -2366,7 +2366,7 @@ function Auxiliary.UntapOperation(p,f,s,o,min,max,ex,...)
 			end
 end
 --Increase Power, Decrease Power
---operation function for abilities that target creatures to increase/reduce their power
+--operation for abilities that target creatures to increase/reduce their power
 function Auxiliary.TargetUpdatePowerOperation(desc_id,val,reset_flag,reset_count)
 	return	function(e,tp,eg,ep,ev,re,r,rp)
 				local g=Duel.GetChainInfo(0,CHAININFO_TARGET_CARDS):Filter(Card.IsRelateToEffect,nil,e)
@@ -2560,14 +2560,14 @@ function Auxiliary.DiscardHandCondition(p)
 				return eg:IsExists(aux.FilterEqualFunction(Card.GetPreviousControler,player),1,nil)
 			end
 end
---target function for a continuous effect that is active to cards other than the card with the continuous effect
+--target for a continuous effect that is active to cards other than the card with the continuous effect
 function Auxiliary.TargetBoolFunctionExceptSelf(f,...)
 	local ext_params={...}
 	return	function(effect,target)
 				return target~=effect:GetHandler() and (not f or f(target,table.unpack(ext_params)))
 			end
 end
---target function for optional trigger abilities that do not target cards
+--target for optional trigger abilities that do not target cards
 function Auxiliary.CheckCardFunction(f,s,o,ex,...)
 	local ext_params={...}
 	return	function(e,tp,eg,ep,ev,re,r,rp,chk)
@@ -2579,7 +2579,7 @@ function Auxiliary.CheckCardFunction(f,s,o,ex,...)
 				if chk==0 then return Duel.IsExistingMatchingCard(f,tp,s,o,1,exg,table.unpack(ext_params)) end
 			end
 end
---target function for trigger abilities that target cards
+--target for trigger abilities that target cards
 function Auxiliary.TargetCardFunction(p,f,s,o,min,max,desc,ex,...)
 	local ext_params={...}
 	return	function(e,tp,eg,ep,ev,re,r,rp,chk,chkc)
@@ -2611,7 +2611,7 @@ function Auxiliary.TargetCardFunction(p,f,s,o,min,max,desc,ex,...)
 				Duel.SelectTarget(player,f,tp,s,o,min,max,exg,table.unpack(ext_params))
 			end
 end
---target function for trigger abilities that target cards and displays the triggered ability
+--target for trigger abilities that target cards and displays the triggered ability
 function Auxiliary.TargetCardFunction2(p,f,s,o,min,max,desc,ex,...)
 	local ext_params={...}
 	return	function(e,tp,eg,ep,ev,re,r,rp,chk,chkc)
@@ -2644,14 +2644,14 @@ function Auxiliary.TargetCardFunction2(p,f,s,o,min,max,desc,ex,...)
 				Duel.SelectTarget(player,f,tp,s,o,min,max,exg,table.unpack(ext_params))
 			end
 end
---target function to check if a player has cards in their deck
+--target to check if a player has cards in their deck
 function Auxiliary.CheckDeckFunction(p)
 	return	function(e,tp,eg,ep,ev,re,r,rp,chk)
 				local player=(p==PLAYER_SELF and tp) or (p==PLAYER_OPPO and 1-tp)
 				if chk==0 then return Duel.GetFieldGroupCount(player,LOCATION_DECK,0)>0 end
 			end
 end
---target function for Duel.Hint(HINT_OPSELECTED,1-tp,e:GetDescription())
+--target for Duel.Hint(HINT_OPSELECTED,1-tp,e:GetDescription())
 function Auxiliary.HintTarget(e,tp,eg,ep,ev,re,r,rp,chk,chkc)
 	if e:IsHasProperty(EFFECT_FLAG_CARD_TARGET) then
 		if chkc then return false end
@@ -2714,20 +2714,20 @@ loadutility("lua.lua")
 loadutility("rule.lua")
 --[[
 	References
-		1. Cost Reduction and Cost Increase abilities don't increase or decrease the cost written on the card
-		https://kaijudo.fandom.com/wiki/Citadel_Judge/Rulings
-		2. Prevent multiple "shield blast" abilities from chaining
-			* Voltanis the Adjudicator
-			https://github.com/Fluorohydride/ygopro-scripts/blob/967a2fe/c20951752.lua#L12
-		3. Auxiliary.DecktopSendtoHandOperation
-			* Ma'at
-			https://github.com/Fluorohydride/ygopro-scripts/blob/2c4f0ca/c18631392.lua#L71
-			* Spellbook Library of the Heliosphere
-			https://github.com/Fluorohydride/ygopro-scripts/blob/6324c1c/c20822520.lua#L65
-			* Dark Magical Circle
-			https://github.com/Fluorohydride/ygopro-scripts/blob/cb54f7a/c47222536.lua#L38
-			* World Legacy Survivor
-			https://github.com/Fluorohydride/ygopro-scripts/blob/97e53fe/c31706048.lua#L24
-		4. Auxiliary.AddSingleTriggerEffect and Auxiliary.AddTriggerEffect Trigger conditions
-		https://duelmasters.fandom.com/wiki/List_of_Trigger_Conditions
+	1. Cost Reduction and Cost Increase abilities don't increase or decrease the cost written on the card
+	https://kaijudo.fandom.com/wiki/Citadel_Judge/Rulings
+	2. Prevent multiple "shield blast" abilities from chaining
+	* Voltanis the Adjudicator
+	https://github.com/Fluorohydride/ygopro-scripts/blob/967a2fe/c20951752.lua#L12
+	3. Auxiliary.DecktopSendtoHandOperation
+	* Dark Magical Circle
+	https://github.com/Fluorohydride/ygopro-scripts/blob/cb54f7a/c47222536.lua#L38
+	* Ma'at
+	https://github.com/Fluorohydride/ygopro-scripts/blob/2c4f0ca/c18631392.lua#L71
+	* Spellbook Library of the Heliosphere
+	https://github.com/Fluorohydride/ygopro-scripts/blob/6324c1c/c20822520.lua#L65
+	* World Legacy Survivor
+	https://github.com/Fluorohydride/ygopro-scripts/blob/97e53fe/c31706048.lua#L24
+	4. Auxiliary.AddSingleTriggerEffect and Auxiliary.AddTriggerEffect Trigger conditions
+	https://duelmasters.fandom.com/wiki/List_of_Trigger_Conditions
 ]]

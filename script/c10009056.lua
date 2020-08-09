@@ -24,7 +24,7 @@ function scard.op1(e,tp,eg,ep,ev,re,r,rp)
 end
 --[[
 	Rulings
-		Q: Can I cast Sunstrike targeting an enemy creature with power 5000 or more that's already tapped?
+	Q: Can I cast Sunstrike targeting an enemy creature with power 5000 or more that's already tapped?
 		A: Yes. If you do, that creature won't untap at the start of your opponent's next turn.
-		https://kaijudo.fandom.com/wiki/Sunstrike/Rulings
+	https://kaijudo.fandom.com/wiki/Sunstrike/Rulings
 ]]

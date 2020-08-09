@@ -31,7 +31,7 @@ function scard.tg1(e,tp,eg,ep,ev,re,r,rp,chk,chkc)
 end
 --[[
 	Rulings
-		Q: If I don't have any cards in my hand, can I just draw a card?
+	Q: If I don't have any cards in my hand, can I just draw a card?
 		A: No.
-		https://kaijudo.fandom.com/wiki/Mischievous_Fire-Chick/Rulings
+	https://kaijudo.fandom.com/wiki/Mischievous_Fire-Chick/Rulings
 ]]

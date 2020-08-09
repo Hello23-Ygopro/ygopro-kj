@@ -37,6 +37,6 @@ function scard.op1(e,tp,eg,ep,ev,re,r,rp)
 end
 --[[
 	References
-		1. Proxy Dragon
-		https://github.com/Fluorohydride/ygopro-scripts/blob/master/c22862454.lua
+	* Proxy Dragon
+	https://github.com/Fluorohydride/ygopro-scripts/blob/master/c22862454.lua
 ]]

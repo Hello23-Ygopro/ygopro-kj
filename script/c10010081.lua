@@ -23,9 +23,9 @@ function scard.op1(e,tp,eg,ep,ev,re,r,rp)
 end
 --[[
 	Rulings
-		Q: Can those creatures be untapped in other ways?
+	Q: Can those creatures be untapped in other ways?
 		A: Yes. Your opponent (or you) could use a spell or a creature's ability to untap any of those creatures, in which
 		case the part of "Supernova" that tries to keep them tapped won't do anything. They'll untap as normal at the
 		start of your opponent's future turns.
-		https://kaijudo.fandom.com/wiki/Cassiopeia_Starborn/Rulings
+	https://kaijudo.fandom.com/wiki/Cassiopeia_Starborn/Rulings
 ]]

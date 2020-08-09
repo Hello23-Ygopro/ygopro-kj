@@ -26,8 +26,9 @@ function scard.op1(e,tp,eg,ep,ev,re,r,rp)
 end
 --[[
 	Rulings
-		https://kaijudo.fandom.com/wiki/Skycrusher%27s_Elite/Rulings
+	https://kaijudo.fandom.com/wiki/Skycrusher%27s_Elite/Rulings
+
 	References
-		1. Bujingi Raven
-		https://github.com/Fluorohydride/ygopro-scripts/blob/fedc245/c11958188.lua#L21
+	* Bujingi Raven
+	https://github.com/Fluorohydride/ygopro-scripts/blob/fedc245/c11958188.lua#L21
 ]]

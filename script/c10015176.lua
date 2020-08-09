@@ -26,7 +26,7 @@ function scard.op1(e,tp,eg,ep,ev,re,r,rp)
 end
 --[[
 	Rulings
-		Q: If Quetaro attacks a creature and I win the clash, can I have Quetaro battle that creature?
+	Q: If Quetaro attacks a creature and I win the clash, can I have Quetaro battle that creature?
 		A: Yes. Your opponent can't block or protect against the battle caused by "Brawl."
-		https://kaijudo.fandom.com/wiki/Quetaro_the_Gladiator/Rulings
+	https://kaijudo.fandom.com/wiki/Quetaro_the_Gladiator/Rulings
 ]]

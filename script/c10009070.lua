@@ -21,8 +21,8 @@ function scard.tg2(e,tp,eg,ep,ev,re,r,rp,chk)
 end
 --[[
 	Rulings
-		Q: When Oktuska enters the battlefield, in what order do I use its 2 abilities?
+	Q: When Oktuska enters the battlefield, in what order do I use its 2 abilities?
 		A: Because the "Ingenuity" and "Mana Tendrils" abilities both trigger at the same time, you can use those
 		abilities in either order.
-		https://kaijudo.fandom.com/wiki/Oktuska_the_Infused/Rulings
+	https://kaijudo.fandom.com/wiki/Oktuska_the_Infused/Rulings
 ]]

@@ -26,16 +26,14 @@ function scard.op1(e,tp,eg,ep,ev,re,r,rp)
 end
 --[[
 	Rulings
-		Q: Say my chosen creature has an ability that triggers whenever it attacks, or my opponent's creature has an
-		ability that says it can't be attacked. Do those abilities apply?
+	Q: Say my chosen creature has an ability that triggers whenever it attacks, or my opponent's creature has an ability
+	that says it can't be attacked. Do those abilities apply?
 		A: No. Your creature isn't attacking. However, any abilities that refer to battling or that trigger whenever
 		a creature wins or loses a battle will apply.
-
-		Q: Can my opponent block my creature?
+	Q: Can my opponent block my creature?
 		A: No. Fight! doesn't make your creature attack, so it can't be blocked.
-
-		Q: If my opponent doesn't have any creatures in the battle zone, can I cast Fight! and have my creature break any
-		of my opponent's shields?
+	Q: If my opponent doesn't have any creatures in the battle zone, can I cast Fight! and have my creature break any of
+	my opponent's shields?
 		A: No. If either you or your opponent doesn't have any creatures in the battle zone, Fight! won't do anything.
-		https://kaijudo.fandom.com/wiki/Fight!/Rulings
+	https://kaijudo.fandom.com/wiki/Fight!/Rulings
 ]]

@@ -30,16 +30,15 @@ function scard.op1(e,tp,eg,ep,ev,re,r,rp)
 end
 --[[
 	Rulings
-		Q: If Bronze-Arm Renegade and another Corrupted creature are banished at the same time, can I put them both into
-		my mana zone?
+	Q: If Bronze-Arm Renegade and another Corrupted creature are banished at the same time, can I put them both into my
+	mana zone?
 		A: Yes. "Mana Extraction" will apply to any Corrupted creature banished at the same time as Bronze-Arm Renegade.
-
-		Q: Say I summon Ripper Reaper and use its "Cursed Scythe" ability. I choose to banish my Bronze-Arm Renegade and
-		use "Mana Extraction" to put it into my mana zone. Will my opponent still have to choose one of his or her
-		creatures to be banished?
+	Q: Say I summon Ripper Reaper and use its "Cursed Scythe" ability. I choose to banish my Bronze-Arm Renegade and use
+	"Mana Extraction" to put it into my mana zone. Will my opponent still have to choose one of his or her creatures to be
+	banished?
 		A: Yes. Some abilities like "Cursed Scythe" say that you may do something and "if you do," there's an additional
 		effect. These abilities consider only if you chose to take the action, even if the final result of that action
 		changes because of replacement effects. Since you chose to banish Bronze-Arm Renegade, the additional effect of
 		the "Cursed Scythe" ability will happen.
-		https://kaijudo.fandom.com/wiki/Bronze-Arm_Renegade/Rulings
+	https://kaijudo.fandom.com/wiki/Bronze-Arm_Renegade/Rulings
 ]]

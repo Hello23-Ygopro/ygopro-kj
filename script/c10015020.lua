@@ -26,8 +26,8 @@ function scard.op1(e,tp,eg,ep,ev,re,r,rp)
 end
 --[[
 	Rulings
-		Q: If more than one of my creatures that has power 6000 or more would be banished at the same time, can I banish
-		Regent's Attendant instead of banishing all of them?
+	Q: If more than one of my creatures that has power 6000 or more would be banished at the same time, can I banish
+	Regent's Attendant instead of banishing all of them?
 		A: No. You can save only one creature this way.
-		https://kaijudo.fandom.com/wiki/Regent%27s_Attendant/Rulings
+	https://kaijudo.fandom.com/wiki/Regent%27s_Attendant/Rulings
 ]]

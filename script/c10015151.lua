@@ -34,5 +34,6 @@ function scard.op1(e,tp,eg,ep,ev,re,r,rp)
 end
 --[[
 	References
-		1. Reap and Sow
+	* Reap and Sow
+	https://kaijudo.fandom.com/wiki/Reap_and_Sow
 ]]

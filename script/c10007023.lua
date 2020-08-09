@@ -35,6 +35,6 @@ function scard.con2(e,tp,eg,ep,ev,re,r,rp)
 end
 --[[
 	References
-		1. Kaiser Vorse Raider
-		https://github.com/Fluorohydride/ygopro-scripts/blob/2c4f0ca/c93927067.lua#L48
+	* Kaiser Vorse Raider
+	https://github.com/Fluorohydride/ygopro-scripts/blob/2c4f0ca/c93927067.lua#L48
 ]]

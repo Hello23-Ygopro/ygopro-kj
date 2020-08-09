@@ -28,14 +28,15 @@ function scard.op1(e,tp,eg,ep,ev,re,r,rp)
 end
 --[[
 	Rulings
-		Q: If more than one of my Dragons would be banished at the same time, can I banish Lux and save all of them?
+	Q: If more than one of my Dragons would be banished at the same time, can I banish Lux and save all of them?
 		A: No. "Andromeda's Envoy" can be used to save one Dragon only.
-		https://kaijudo.fandom.com/wiki/Lux/Rulings
+	https://kaijudo.fandom.com/wiki/Lux/Rulings
+
 	References
-		1. Desert Protector
-		https://github.com/Fluorohydride/ygopro-scripts/blob/d0fa049/c38981606.lua#L11
-		2. Koa'ki Meiru Prototype
-		https://github.com/Fluorohydride/ygopro-scripts/blob/d0fa049/c176392.lua#L3
-		3. Secret Six Samurai - Fuma
-		https://github.com/Fluorohydride/ygopro-scripts/blob/9c71d73/c71207871.lua#L14
+	* Desert Protector
+	https://github.com/Fluorohydride/ygopro-scripts/blob/d0fa049/c38981606.lua#L11
+	* Koa'ki Meiru Prototype
+	https://github.com/Fluorohydride/ygopro-scripts/blob/d0fa049/c176392.lua#L3
+	* Secret Six Samurai - Fuma
+	https://github.com/Fluorohydride/ygopro-scripts/blob/9c71d73/c71207871.lua#L14
 ]]

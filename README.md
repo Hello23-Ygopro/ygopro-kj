@@ -133,7 +133,7 @@ You can search for the following specific card information in YGOPro:
 - Power: Use the `Power` tab
 - Race (Creature Type): **N/A**
 - Region-exclusive cards: Use the `Limit` tab
-- You can also search for cards whose abilities have been modified for YGOPro by typing `YGOPro`.
+- You can also search for cards whose text have been modified for YGOPro by typing `YGOPro`.
 </details>
 <details>
 <summary>Differences Between Kaijudo and Duel Masters</summary>

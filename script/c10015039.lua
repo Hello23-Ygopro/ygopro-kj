@@ -33,5 +33,6 @@ function scard.op1(e,tp,eg,ep,ev,re,r,rp)
 end
 --[[
 	References
-		1. Scrutinize
+	* Scrutinize
+	https://kaijudo.fandom.com/wiki/Scrutinize
 ]]

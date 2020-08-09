@@ -24,7 +24,7 @@ function scard.op1(e,tp,eg,ep,ev,re,r,rp)
 end
 --[[
 	Rulings
-		Q: If my opponent has fewer cards in hand than I do, or we have the same number, can I still draw a card?
+	Q: If my opponent has fewer cards in hand than I do, or we have the same number, can I still draw a card?
 		A: Yes.
-		https://kaijudo.fandom.com/wiki/Master_Trader_Cephelia/Rulings
+	https://kaijudo.fandom.com/wiki/Master_Trader_Cephelia/Rulings
 ]]
