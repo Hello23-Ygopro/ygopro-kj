@@ -7,13 +7,13 @@ function scard.initial_effect(c)
 	aux.AddSpellCastEffect(c,0,scard.tg1,scard.op1)
 end
 --choose one (to mana zone or return)
-function scard.retfilter(c)
+function scard.thfilter(c)
 	return c:IsCreature() and c:IsAbleToHand()
 end
 function scard.tg1(e,tp,eg,ep,ev,re,r,rp,chk)
 	if chk==0 then return true end
 	local b1=Duel.IsPlayerCanSendDecktoptoMZone(tp,1)
-	local b2=Duel.IsExistingMatchingCard(aux.ManaZoneFilter(scard.retfilter),tp,LOCATION_MZONE,0,1,nil)
+	local b2=Duel.IsExistingMatchingCard(aux.ManaZoneFilter(scard.thfilter),tp,LOCATION_MZONE,0,1,nil)
 	local option_list={}
 	local t={}
 	if b1 then
@@ -33,7 +33,7 @@ function scard.op1(e,tp,eg,ep,ev,re,r,rp)
 		Duel.SendDecktoptoMZoneUpTo(tp,2,POS_FACEUP_UNTAPPED,REASON_EFFECT)
 	elseif opt==2 then
 		Duel.Hint(HINT_SELECTMSG,tp,HINTMSG_RTOHAND)
-		local g=Duel.SelectMatchingCard(tp,aux.ManaZoneFilter(scard.retfilter),tp,LOCATION_MZONE,0,0,2,nil)
+		local g=Duel.SelectMatchingCard(tp,aux.ManaZoneFilter(scard.thfilter),tp,LOCATION_MZONE,0,0,2,nil)
 		if g:GetCount()==0 then return end
 		Duel.SendtoHand(g,PLAYER_OWNER,REASON_EFFECT)
 		Duel.ConfirmCards(1-tp,g)

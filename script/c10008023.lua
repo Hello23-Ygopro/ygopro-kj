@@ -12,8 +12,8 @@ function scard.initial_effect(c)
 end
 --return
 scard.con1=aux.UnblockedCondition
-function scard.retfilter(c)
+function scard.thfilter(c)
 	return c:IsFaceup() and c:IsManaCostBelow(5) and c:IsAbleToHand()
 end
-scard.tg1=aux.TargetCardFunction(PLAYER_SELF,scard.retfilter,LOCATION_BZONE,LOCATION_BZONE,1,1,HINTMSG_RTOHAND)
+scard.tg1=aux.TargetCardFunction(PLAYER_SELF,scard.thfilter,LOCATION_BZONE,LOCATION_BZONE,1,1,HINTMSG_RTOHAND)
 scard.op1=aux.TargetSendtoHandOperation

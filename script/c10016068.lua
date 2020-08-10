@@ -11,13 +11,13 @@ end
 function scard.posfilter(c)
 	return c:IsFaceup() and c:IsAbleToTap()
 end
-function scard.retfilter(c)
+function scard.thfilter(c)
 	return c:IsCreature() and c:IsAbleToHand()
 end
 function scard.tg1(e,tp,eg,ep,ev,re,r,rp,chk)
 	if chk==0 then return true end
 	local b1=Duel.IsExistingTarget(scard.posfilter,tp,0,LOCATION_BZONE,1,nil)
-	local b2=Duel.IsExistingMatchingCard(aux.KJDPileFilter(scard.retfilter),tp,LOCATION_DPILE,0,1,nil)
+	local b2=Duel.IsExistingMatchingCard(aux.KJDPileFilter(scard.thfilter),tp,LOCATION_DPILE,0,1,nil)
 	local option_list={}
 	local t={}
 	if b1 then
@@ -46,7 +46,7 @@ function scard.op1(e,tp,eg,ep,ev,re,r,rp)
 		end
 	elseif opt==2 then
 		Duel.Hint(HINT_SELECTMSG,tp,HINTMSG_RTOHAND)
-		local g=Duel.SelectMatchingCard(tp,aux.KJDPileFilter(scard.retfilter),tp,LOCATION_DPILE,0,1,1,nil)
+		local g=Duel.SelectMatchingCard(tp,aux.KJDPileFilter(scard.thfilter),tp,LOCATION_DPILE,0,1,1,nil)
 		if g:GetCount()==0 then return end
 		Duel.SendtoHand(g,PLAYER_OWNER,REASON_EFFECT)
 		Duel.ConfirmCards(g,1-tp)

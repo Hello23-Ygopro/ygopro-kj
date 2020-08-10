@@ -8,9 +8,9 @@ function scard.initial_effect(c)
 	--double breaker
 	aux.EnableBreaker(c,EFFECT_DOUBLE_BREAKER)
 	--return
-	aux.AddSingleTriggerEffect(c,0,EVENT_COME_INTO_PLAY,nil,nil,aux.SendtoHandOperation(nil,aux.KJDPileFilter(scard.retfilter),LOCATION_DPILE,0))
+	aux.AddSingleTriggerEffect(c,0,EVENT_COME_INTO_PLAY,nil,nil,aux.SendtoHandOperation(nil,aux.KJDPileFilter(scard.thfilter),LOCATION_DPILE,0))
 end
 --return
-function scard.retfilter(c)
+function scard.thfilter(c)
 	return c:IsRaceCategory(RACECAT_DRAGON)
 end

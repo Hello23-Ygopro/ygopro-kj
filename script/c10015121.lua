@@ -15,17 +15,17 @@ end
 --vortex evolution
 scard.evofilter=aux.FilterBoolFunction(Card.IsEvolutionCivilization,CIVILIZATION_NATURE)
 --unleash (to mana zone, return)
-function scard.retfilter(c)
+function scard.thfilter(c)
 	return c:IsCreature() and c:IsAbleToHand()
 end
 function scard.tg1(e,tp,eg,ep,ev,re,r,rp,chk)
 	if chk==0 then return Duel.IsPlayerCanSendDecktoptoMZone(tp,1)
-		or Duel.IsExistingMatchingCard(aux.ManaZoneFilter(scard.retfilter),tp,LOCATION_MZONE,0,1,nil) end
+		or Duel.IsExistingMatchingCard(aux.ManaZoneFilter(scard.thfilter),tp,LOCATION_MZONE,0,1,nil) end
 end
 function scard.op1(e,tp,eg,ep,ev,re,r,rp)
 	Duel.SendDecktoptoMZone(tp,1,POS_FACEUP_UNTAPPED,REASON_EFFECT)
 	Duel.Hint(HINT_SELECTMSG,tp,HINTMSG_RTOHAND)
-	local g=Duel.SelectMatchingCard(tp,aux.ManaZoneFilter(scard.retfilter),tp,LOCATION_MZONE,0,0,1,nil)
+	local g=Duel.SelectMatchingCard(tp,aux.ManaZoneFilter(scard.thfilter),tp,LOCATION_MZONE,0,0,1,nil)
 	if g:GetCount()==0 then return end
 	Duel.BreakEffect()
 	Duel.SendtoHand(g,PLAYER_OWNER,REASON_EFFECT)

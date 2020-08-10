@@ -7,9 +7,9 @@ function scard.initial_effect(c)
 	--double breaker
 	aux.EnableBreaker(c,EFFECT_DOUBLE_BREAKER)
 	--return
-	aux.AddSingleTriggerEffect(c,0,EVENT_ATTACK_ANNOUNCE,nil,nil,aux.SendtoHandOperation(PLAYER_SELF,aux.KJDPileFilter(scard.retfilter),LOCATION_DPILE,0,1))
+	aux.AddSingleTriggerEffect(c,0,EVENT_ATTACK_ANNOUNCE,nil,nil,aux.SendtoHandOperation(PLAYER_SELF,aux.KJDPileFilter(scard.thfilter),LOCATION_DPILE,0,1))
 end
 --return
-function scard.retfilter(c)
+function scard.thfilter(c)
 	return c:KJIsRace(RACE_SHADOW_CHAMPION)
 end

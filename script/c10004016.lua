@@ -10,7 +10,7 @@ function scard.initial_effect(c)
 end
 --to discard pile, return or draw
 scard.tg1=aux.DecktopKJSendtoDPileTarget(PLAYER_OPPO)
-function scard.retfilter(c,e)
+function scard.thfilter(c,e)
 	return c:IsFaceup() and c:IsAbleToHand() and c:IsCanBeEffectTarget(e)
 end
 function scard.op1(e,tp,eg,ep,ev,re,r,rp)
@@ -18,7 +18,7 @@ function scard.op1(e,tp,eg,ep,ev,re,r,rp)
 	local tc=Duel.GetOperatedGroup():GetFirst()
 	if tc:IsCreature() then
 		Duel.Hint(HINT_SELECTMSG,tp,HINTMSG_RTOHAND)
-		local g=Duel.SelectMatchingCard(tp,scard.retfilter,tp,0,LOCATION_BZONE,1,1,nil,e)
+		local g=Duel.SelectMatchingCard(tp,scard.thfilter,tp,0,LOCATION_BZONE,1,1,nil,e)
 		if g:GetCount()==0 then return end
 		Duel.SetTargetCard(g)
 		Duel.SendtoHand(g,PLAYER_OWNER,REASON_EFFECT)

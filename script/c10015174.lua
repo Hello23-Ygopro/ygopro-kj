@@ -11,13 +11,13 @@ function scard.initial_effect(c)
 end
 --clash (return)
 scard.tg1=aux.ClashTarget(PLAYER_SELF)
-function scard.retfilter(c,e)
+function scard.thfilter(c,e)
 	return c:IsFaceup() and c:IsAbleToHand() and c:IsCanBeEffectTarget(e)
 end
 function scard.op1(e,tp,eg,ep,ev,re,r,rp)
 	if not Duel.Clash(tp) then return end
 	Duel.Hint(HINT_SELECTMSG,tp,HINTMSG_RTOHAND)
-	local g=Duel.SelectMatchingCard(tp,scard.retfilter,tp,LOCATION_BZONE,LOCATION_BZONE,1,1,nil,e)
+	local g=Duel.SelectMatchingCard(tp,scard.thfilter,tp,LOCATION_BZONE,LOCATION_BZONE,1,1,nil,e)
 	if g:GetCount()==0 then return end
 	Duel.SetTargetCard(g)
 	Duel.SendtoHand(g,PLAYER_OWNER,REASON_EFFECT)

@@ -8,18 +8,18 @@ function scard.initial_effect(c)
 	aux.AddSingleTriggerEffect(c,0,EVENT_ATTACK_ANNOUNCE,true,scard.tg1,scard.op1)
 end
 --return, confirm deck (cast for free)
-function scard.retfilter(c)
+function scard.thfilter(c)
 	return c:IsFaceup() and c:IsAbleToHand()
 end
 function scard.tg1(e,tp,eg,ep,ev,re,r,rp,chk)
-	if chk==0 then return Duel.IsExistingMatchingCard(scard.retfilter,tp,LOCATION_BZONE,0,1,e:GetHandler()) end
+	if chk==0 then return Duel.IsExistingMatchingCard(scard.thfilter,tp,LOCATION_BZONE,0,1,e:GetHandler()) end
 end
 function scard.castfilter(c,cost)
 	return c:IsSpell() and c:IsManaCostBelow(cost)
 end
 function scard.op1(e,tp,eg,ep,ev,re,r,rp)
 	Duel.Hint(HINT_SELECTMSG,tp,HINTMSG_RTOHAND)
-	local g1=Duel.SelectMatchingCard(tp,scard.retfilter,tp,LOCATION_BZONE,0,1,1,e:GetHandler())
+	local g1=Duel.SelectMatchingCard(tp,scard.thfilter,tp,LOCATION_BZONE,0,1,1,e:GetHandler())
 	if g1:GetCount()==0 then return end
 	Duel.HintSelection(g1)
 	if Duel.SendtoHand(g1,PLAYER_OWNER,REASON_EFFECT)==0 or Duel.GetFieldGroupCount(tp,LOCATION_DECK,0)==0 then return end

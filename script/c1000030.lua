@@ -8,7 +8,7 @@ function scard.initial_effect(c)
 	aux.AddSingleTriggerEffect(c,0,EVENT_COME_INTO_PLAY,nil,nil,scard.op1)
 end
 --return, to battle zone
-function scard.retfilter(c)
+function scard.thfilter(c)
 	return c:IsCreature() and c:IsAbleToHand()
 end
 function scard.tbfilter(c,e,tp)
@@ -16,7 +16,7 @@ function scard.tbfilter(c,e,tp)
 end
 function scard.op1(e,tp,eg,ep,ev,re,r,rp)
 	Duel.Hint(HINT_SELECTMSG,tp,HINTMSG_RTOHAND)
-	local g1=Duel.SelectMatchingCard(tp,aux.KJDPileFilter(scard.retfilter),tp,LOCATION_DPILE,0,1,1,nil)
+	local g1=Duel.SelectMatchingCard(tp,aux.KJDPileFilter(scard.thfilter),tp,LOCATION_DPILE,0,1,1,nil)
 	if g1:GetCount()>0 and Duel.SendtoHand(g1,PLAYER_OWNER,REASON_EFFECT)>0 then
 		Duel.ConfirmCards(1-tp,g1)
 		Duel.ShuffleHand(tp)

@@ -5,9 +5,9 @@ function scard.initial_effect(c)
 	--creature
 	aux.EnableCreatureAttribute(c)
 	--return
-	aux.AddSingleTriggerEffect(c,0,EVENT_ATTACK_ANNOUNCE,nil,nil,aux.SendtoHandOperation(PLAYER_SELF,aux.KJDPileFilter(scard.retfilter),LOCATION_DPILE,0,1))
+	aux.AddSingleTriggerEffect(c,0,EVENT_ATTACK_ANNOUNCE,nil,nil,aux.SendtoHandOperation(PLAYER_SELF,aux.KJDPileFilter(scard.thfilter),LOCATION_DPILE,0,1))
 end
 --return
-function scard.retfilter(c)
+function scard.thfilter(c)
 	return c:IsCreature() and c:IsManaCostBelow(4)
 end

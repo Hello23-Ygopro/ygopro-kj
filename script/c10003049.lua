@@ -15,7 +15,7 @@ end
 function scard.con1(e,tp,eg,ep,ev,re,r,rp)
 	return eg:IsExists(scard.cfilter,1,e:GetHandler(),tp)
 end
-function scard.retfilter(c)
+function scard.thfilter(c)
 	return c:IsFaceup() and c:IsManaCostBelow(4)
 end
-scard.op1=aux.SendtoHandOperation(nil,scard.retfilter,LOCATION_BZONE,LOCATION_BZONE)
+scard.op1=aux.SendtoHandOperation(nil,scard.thfilter,LOCATION_BZONE,LOCATION_BZONE)

@@ -7,12 +7,12 @@ function scard.initial_effect(c)
 	--double breaker
 	aux.EnableBreaker(c,EFFECT_DOUBLE_BREAKER)
 	--return
-	aux.AddSingleTriggerEffect(c,0,EVENT_COME_INTO_PLAY,nil,nil,aux.SendtoHandOperation(PLAYER_SELF,aux.KJDPileFilter(scard.retfilter),LOCATION_DPILE,0,1))
+	aux.AddSingleTriggerEffect(c,0,EVENT_COME_INTO_PLAY,nil,nil,aux.SendtoHandOperation(PLAYER_SELF,aux.KJDPileFilter(scard.thfilter),LOCATION_DPILE,0,1))
 	--win game
 	aux.AddTriggerEffect(c,1,EVENT_PHASE+PHASE_END,nil,nil,scard.op1,nil,scard.con1)
 end
 --return
-function scard.retfilter(c)
+function scard.thfilter(c)
 	return c:IsSpell() and c:IsCivilization(CIVILIZATION_LIGHT)
 end
 --win game

@@ -9,7 +9,7 @@ function scard.initial_effect(c)
 	aux.AddSpellCastEffect(c,0,nil,scard.op1)
 end
 --draw, discard, return
-function scard.retfilter(c,cost,e)
+function scard.thfilter(c,cost,e)
 	return c:IsFaceup() and c:IsManaCost(cost) and c:IsAbleToHand() and c:IsCanBeEffectTarget(e)
 end
 function scard.op1(e,tp,eg,ep,ev,re,r,rp)
@@ -19,7 +19,7 @@ function scard.op1(e,tp,eg,ep,ev,re,r,rp)
 	local tc=Duel.GetOperatedGroup():GetFirst()
 	local cost=tc:GetManaCost()
 	Duel.Hint(HINT_SELECTMSG,tp,HINTMSG_RTOHAND)
-	local g=Duel.SelectMatchingCard(tp,scard.retfilter,tp,LOCATION_BZONE,LOCATION_BZONE,0,1,nil,cost,e)
+	local g=Duel.SelectMatchingCard(tp,scard.thfilter,tp,LOCATION_BZONE,LOCATION_BZONE,0,1,nil,cost,e)
 	if g:GetCount()==0 then return end
 	Duel.SetTargetCard(g)
 	Duel.SendtoHand(g,PLAYER_OWNER,REASON_EFFECT)

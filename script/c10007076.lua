@@ -9,7 +9,7 @@ function scard.initial_effect(c)
 	aux.AddSpellCastEffect(c,0,nil,scard.op1,EFFECT_FLAG_CARD_TARGET)
 end
 --return, tap
-function scard.retfilter(c,e)
+function scard.thfilter(c,e)
 	return c:IsFaceup() and c:IsAbleToHand() and c:IsCanBeEffectTarget(e)
 end
 function scard.posfilter(c,e)
@@ -17,7 +17,7 @@ function scard.posfilter(c,e)
 end
 function scard.op1(e,tp,eg,ep,ev,re,r,rp)
 	Duel.Hint(HINT_SELECTMSG,tp,HINTMSG_RTOHAND)
-	local g1=Duel.SelectMatchingCard(tp,scard.retfilter,tp,LOCATION_BZONE,LOCATION_BZONE,1,1,nil,e)
+	local g1=Duel.SelectMatchingCard(tp,scard.thfilter,tp,LOCATION_BZONE,LOCATION_BZONE,1,1,nil,e)
 	if g1:GetCount()>0 then
 		Duel.SetTargetCard(g1)
 		Duel.SendtoHand(g1,PLAYER_OWNER,REASON_EFFECT)

@@ -61,15 +61,15 @@ end
 function scard.con1(e,tp,eg,ep,ev,re,r,rp)
 	return e:GetLabel()==1
 end
-function scard.retfilter(c,cost)
+function scard.thfilter(c,cost)
 	return c:IsFaceup() and c:IsManaCost(cost) and c:IsAbleToHand()
 end
 function scard.tg1(e,tp,eg,ep,ev,re,r,rp,chk,chkc)
 	local g=e:GetLabelObject()
 	local cost=g:GetFirst():GetManaCost()
-	if chkc then return chkc:IsLocation(LOCATION_BZONE) and scard.retfilter(chkc,cost) end
-	if chk==0 then return Duel.IsExistingTarget(scard.retfilter,tp,LOCATION_BZONE,LOCATION_BZONE,1,nil,cost) end
+	if chkc then return chkc:IsLocation(LOCATION_BZONE) and scard.thfilter(chkc,cost) end
+	if chk==0 then return Duel.IsExistingTarget(scard.thfilter,tp,LOCATION_BZONE,LOCATION_BZONE,1,nil,cost) end
 	Duel.Hint(HINT_SELECTMSG,tp,HINTMSG_RTOHAND)
-	Duel.SelectTarget(tp,scard.retfilter,tp,LOCATION_BZONE,LOCATION_BZONE,1,1,nil,cost)
+	Duel.SelectTarget(tp,scard.thfilter,tp,LOCATION_BZONE,LOCATION_BZONE,1,1,nil,cost)
 	g:Clear()
 end
