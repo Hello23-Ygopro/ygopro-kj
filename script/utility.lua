@@ -419,7 +419,9 @@ function Auxiliary.CannotBeBattleTargetValue(e,c)
 	local t={c:IsHasEffect(EFFECT_ATTACK_UNTAPPED)}
 	local code=0
 	for _,te in pairs(t) do
-		if te:GetValue()==EFFECT_BLOCKER then code=EFFECT_BLOCKER end
+		if te:GetValue()==EFFECT_BLOCKER then
+			code=EFFECT_BLOCKER
+		end
 	end
 	if code>0 then
 		return not e:GetHandler():IsHasEffect(code)
