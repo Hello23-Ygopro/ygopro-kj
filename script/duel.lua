@@ -349,7 +349,7 @@ function Duel.SendtoSZone(targets)
 	return res
 end
 --send a card from the top of a player's deck to the mana zone
-function Duel.SendDecktoptoMZone(player,count,pos,reason)
+function Duel.SendDecktoMZone(player,count,pos,reason)
 	--player: the player whose cards to send to the mana zone
 	--count: the number of cards to send to the mana zone
 	local g=Duel.GetDecktopGroup(player,count)
@@ -357,7 +357,7 @@ function Duel.SendDecktoptoMZone(player,count,pos,reason)
 	return Duel.SendtoMZone(g,pos,reason)
 end
 --send a card from the top of a player's deck to the discard pile
-function Duel.KJSendDecktoptoDPile(player,count,reason)
+function Duel.KJSendDecktoDPile(player,count,reason)
 	--player: the player whose cards to send to the discard pile
 	--count: the number of cards to send to the discard pile
 	local g=Duel.GetDecktopGroup(player,count)
@@ -365,7 +365,7 @@ function Duel.KJSendDecktoptoDPile(player,count,reason)
 	return Duel.KJSendtoDPile(g,reason)
 end
 --send a card from the top of a player's deck to the shield zone
-function Duel.SendDecktoptoSZone(player,count)
+function Duel.SendDecktoSZone(player,count)
 	--player: the player whose cards to send to the shield zone
 	--count: the number of cards to send to the shield zone
 	local g=Duel.GetDecktopGroup(player,count)
@@ -373,25 +373,25 @@ function Duel.SendDecktoptoSZone(player,count)
 	return Duel.SendtoSZone(g)
 end
 --send up to a number of cards from the top of a player's deck to the mana zone
-function Duel.SendDecktoptoMZoneUpTo(player,count,pos,reason)
+function Duel.SendDecktoMZoneUpTo(player,count,pos,reason)
 	local deck_count=Duel.GetFieldGroupCount(player,LOCATION_DECK,0)
-	if deck_count>0 and Duel.IsPlayerCanSendDecktoptoMZone(player,1) and Duel.SelectYesNo(player,YESNOMSG_TOMZONE) then
+	if deck_count>0 and Duel.IsPlayerCanSendDecktoMZone(player,1) and Duel.SelectYesNo(player,YESNOMSG_TOMZONE) then
 		if deck_count>count then deck_count=count end
 		local t={}
 		for i=1,deck_count do t[i]=i end
 		Duel.Hint(HINT_SELECTMSG,player,HINTMSG_ANNOUNCETOMZONE)
 		local an=Duel.AnnounceNumber(player,table.unpack(t))
-		return Duel.SendDecktoptoMZone(player,an,pos,reason)
+		return Duel.SendDecktoMZone(player,an,pos,reason)
 	end
 	return 0
 end
 --check if a player can send a card from the top of their deck to the discard pile
-function Duel.KJIsPlayerCanSendDecktoptoDPile(player,count)
+function Duel.KJIsPlayerCanSendDecktoDPile(player,count)
 	local g=Duel.GetDecktopGroup(player,count)
 	return g:FilterCount(Card.KJIsAbleToDPile,nil)>0
 end
 --check if a player can send a card from the top of their deck to the shield zone
-function Duel.IsPlayerCanSendDecktoptoSZone(player,count)
+function Duel.IsPlayerCanSendDecktoSZone(player,count)
 	local g=Duel.GetDecktopGroup(player,count)
 	return g:FilterCount(Card.IsAbleToSZone,nil)>0
 end
@@ -510,4 +510,4 @@ Duel.KJBanish=Duel.Destroy
 --let 2 creatures do battle with each other
 Duel.DoBattle=Duel.CalculateDamage
 --check if a player can send a card from the top of their deck to the mana zone
-Duel.IsPlayerCanSendDecktoptoMZone=Duel.IsPlayerCanDiscardDeck
+Duel.IsPlayerCanSendDecktoMZone=Duel.IsPlayerCanDiscardDeck

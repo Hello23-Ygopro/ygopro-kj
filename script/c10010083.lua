@@ -14,7 +14,7 @@ function scard.filter(c,e,tp)
 	return c:IsAbleToBZone(e,0,tp,false,false) or c:IsAbleToHand()
 end
 function scard.op1(e,tp,eg,ep,ev,re,r,rp)
-	Duel.KJSendDecktoptoDPile(tp,3,REASON_EFFECT)
+	Duel.KJSendDecktoDPile(tp,3,REASON_EFFECT)
 	local g=Duel.GetMatchingGroup(aux.KJDPileFilter(scard.filter),tp,LOCATION_DPILE,0,nil,e,tp)
 	if g:GetCount()==0 then return end
 	Duel.BreakEffect()

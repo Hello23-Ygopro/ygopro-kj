@@ -25,5 +25,5 @@ function scard.op1(e,tp,eg,ep,ev,re,r,rp)
 	end
 	local opt=t[Duel.SelectOption(tp,table.unpack(option_list))+1]
 	local p=(opt==1 and tp) or (opt==2 and 1-tp)
-	Duel.KJSendDecktoptoDPile(p,2,REASON_EFFECT)
+	Duel.KJSendDecktoDPile(p,2,REASON_EFFECT)
 end

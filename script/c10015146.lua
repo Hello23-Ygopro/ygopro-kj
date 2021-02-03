@@ -10,6 +10,6 @@ end
 --clash (get ability)
 function scard.op1(e,tp,eg,ep,ev,re,r,rp)
 	if Duel.Clash(tp) then
-		Duel.SendDecktoptoMZone(tp,1,POS_FACEUP_UNTAPPED,REASON_EFFECT)
+		Duel.SendDecktoMZone(tp,1,POS_FACEUP_UNTAPPED,REASON_EFFECT)
 	end
 end

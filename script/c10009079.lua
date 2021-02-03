@@ -11,7 +11,7 @@ function scard.initial_effect(c)
 end
 --to mana zone
 function scard.op1(e,tp,eg,ep,ev,re,r,rp)
-	if Duel.IsPlayerCanSendDecktoptoMZone(tp,1) and Duel.SelectYesNo(tp,YESNOMSG_TOMZONE) then
-		Duel.SendDecktoptoMZone(tp,1,POS_FACEUP_UNTAPPED,REASON_EFFECT)
+	if Duel.IsPlayerCanSendDecktoMZone(tp,1) and Duel.SelectYesNo(tp,YESNOMSG_TOMZONE) then
+		Duel.SendDecktoMZone(tp,1,POS_FACEUP_UNTAPPED,REASON_EFFECT)
 	end
 end

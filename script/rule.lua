@@ -12,8 +12,8 @@ function Rule.RegisterRules(c)
 	c:RegisterEffect(e1)
 end
 function Rule.ApplyRules(e,tp,eg,ep,ev,re,r,rp)
-	if Duel.GetFlagEffect(PLAYER_ONE,10000000)>0 then return end
-	Duel.RegisterFlagEffect(PLAYER_ONE,10000000,0,0,0)
+	if Duel.GetFlagEffect(PLAYER_ONE,FLAG_CODE_RULES)>0 then return end
+	Duel.RegisterFlagEffect(PLAYER_ONE,FLAG_CODE_RULES,0,0,0)
 	--remove rules
 	Rule.remove_rules(PLAYER_ONE)
 	Rule.remove_rules(PLAYER_TWO)
@@ -24,8 +24,8 @@ function Rule.ApplyRules(e,tp,eg,ep,ev,re,r,rp)
 	Duel.SetLP(PLAYER_ONE,1)
 	Duel.SetLP(PLAYER_TWO,1)
 	--set shields
-	Duel.SendDecktoptoSZone(PLAYER_ONE,5)
-	Duel.SendDecktoptoSZone(PLAYER_TWO,5)
+	Duel.SendDecktoSZone(PLAYER_ONE,5)
+	Duel.SendDecktoSZone(PLAYER_TWO,5)
 	--draw starting hand
 	Duel.Draw(PLAYER_ONE,5,REASON_RULE)
 	Duel.Draw(PLAYER_TWO,5,REASON_RULE)
@@ -157,7 +157,7 @@ function Rule.ApplyRules(e,tp,eg,ep,ev,re,r,rp)
 end
 --remove rules
 function Rule.remove_rules(tp)
-	local g=Duel.GetMatchingGroup(Card.IsCode,tp,LOCATION_ALL,0,nil,10000000)
+	local g=Duel.GetMatchingGroup(Card.IsCode,tp,LOCATION_ALL,0,nil,CARD_RULES)
 	if g:GetCount()==0 then return end
 	Duel.DisableShuffleCheck()
 	Duel.SendtoDeck(g,PLAYER_OWNER,SEQ_DECK_UNEXIST,REASON_RULE)
@@ -171,17 +171,17 @@ function Rule.shuffle_deck(tp)
 end
 --untap
 function Rule.UntapFilter(c)
-	return c:IsFaceup() and c:IsAbleToUntapStartStep()
+	return c:IsFaceup() and c:IsAbleToUntapRule()
 end
 function Rule.UntapCondition(e)
 	local turnp=Duel.GetTurnPlayer()
 	return Duel.IsExistingMatchingCard(Rule.UntapFilter,turnp,LOCATION_BZONE,0,1,nil)
-		or Duel.IsExistingMatchingCard(aux.ManaZoneFilter(Card.IsAbleToUntapStartStep),turnp,LOCATION_MZONE,0,1,nil)
+		or Duel.IsExistingMatchingCard(aux.ManaZoneFilter(Card.IsAbleToUntapRule),turnp,LOCATION_MZONE,0,1,nil)
 end
 function Rule.UntapOperation(e,tp,eg,ep,ev,re,r,rp)
 	local turnp=Duel.GetTurnPlayer()
 	local g1=Duel.GetMatchingGroup(Rule.UntapFilter,turnp,LOCATION_BZONE,0,nil)
-	local g2=Duel.GetMatchingGroup(aux.ManaZoneFilter(Card.IsAbleToUntapStartStep),turnp,LOCATION_MZONE,0,nil)
+	local g2=Duel.GetMatchingGroup(aux.ManaZoneFilter(Card.IsAbleToUntapRule),turnp,LOCATION_MZONE,0,nil)
 	g1:Merge(g2)
 	Duel.Untap(g1,REASON_RULE)
 end
@@ -318,9 +318,12 @@ function Rule.cannot_main_phase2()
 	local e1=Effect.GlobalEffect()
 	e1:SetProperty(EFFECT_FLAG_PLAYER_TARGET)
 	e1:SetType(EFFECT_TYPE_FIELD)
-	e1:SetCode(EFFECT_CANNOT_M2)
+	e1:SetCode(EFFECT_SKIP_M2)
 	e1:SetTargetRange(1,1)
 	Duel.RegisterEffect(e1,0)
+	local e2=e1:Clone()
+	e2:SetCode(EFFECT_CANNOT_M2)
+	Duel.RegisterEffect(e2,0)
 end
 --cannot change position
 function Rule.cannot_change_position()

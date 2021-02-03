@@ -23,7 +23,7 @@ function scard.con1(e)
 	return Duel.GetAttacker():IsControler(e:GetHandlerPlayer())
 end
 function scard.op2(e,tp,eg,ep,ev,re,r,rp)
-	if not Duel.IsPlayerCanSendDecktoptoMZone(tp,1) or not Duel.SelectYesNo(tp,YESNOMSG_TOMZONE) then return end
+	if not Duel.IsPlayerCanSendDecktoMZone(tp,1) or not Duel.SelectYesNo(tp,YESNOMSG_TOMZONE) then return end
 	Duel.Hint(HINT_CARD,0,sid)
-	Duel.SendDecktoptoMZone(tp,1,POS_FACEUP_UNTAPPED,REASON_EFFECT)
+	Duel.SendDecktoMZone(tp,1,POS_FACEUP_UNTAPPED,REASON_EFFECT)
 end

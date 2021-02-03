@@ -10,7 +10,7 @@ function scard.initial_effect(c)
 end
 --to mana zone, get ability
 function scard.op1(e,tp,eg,ep,ev,re,r,rp)
-	Duel.SendDecktoptoMZone(tp,1,POS_FACEUP_UNTAPPED,REASON_EFFECT)
+	Duel.SendDecktoMZone(tp,1,POS_FACEUP_UNTAPPED,REASON_EFFECT)
 	local g=Duel.GetMatchingGroup(Card.IsFaceup,tp,LOCATION_BZONE,0,nil)
 	if g:GetCount()==0 then return end
 	for tc in aux.Next(g) do

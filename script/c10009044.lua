@@ -12,5 +12,5 @@ function scard.initial_effect(c)
 end
 --to shield zone
 function scard.op1(e,tp,eg,ep,ev,re,r,rp)
-	Duel.SendDecktoptoSZone(tp,eg:GetCount())
+	Duel.SendDecktoSZone(tp,eg:GetCount())
 end

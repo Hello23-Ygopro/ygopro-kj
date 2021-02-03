@@ -12,8 +12,8 @@ end
 --discard, to mana zone
 function scard.op1(e,tp,eg,ep,ev,re,r,rp)
 	Duel.RandomDiscardHand(1-tp,1,REASON_EFFECT)
-	if Duel.IsPlayerCanSendDecktoptoMZone(tp,1) and Duel.SelectYesNo(tp,YESNOMSG_TOMZONE) then
+	if Duel.IsPlayerCanSendDecktoMZone(tp,1) and Duel.SelectYesNo(tp,YESNOMSG_TOMZONE) then
 		Duel.BreakEffect()
-		Duel.SendDecktoptoMZone(tp,1,POS_FACEUP_UNTAPPED,REASON_EFFECT)
+		Duel.SendDecktoMZone(tp,1,POS_FACEUP_UNTAPPED,REASON_EFFECT)
 	end
 end

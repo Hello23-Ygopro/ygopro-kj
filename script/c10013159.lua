@@ -20,6 +20,6 @@ function scard.op1(e,tp,eg,ep,ev,re,r,rp)
 	if g:GetCount()==0 then return end
 	Duel.HintSelection(g)
 	if Duel.KJBanish(g,REASON_EFFECT)>0 then
-		Duel.SendDecktoptoMZone(tp,2,POS_FACEUP_TAPPED,REASON_EFFECT)
+		Duel.SendDecktoMZone(tp,2,POS_FACEUP_TAPPED,REASON_EFFECT)
 	end
 end

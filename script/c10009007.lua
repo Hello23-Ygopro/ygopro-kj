@@ -19,6 +19,6 @@ function scard.op1(e,tp,eg,ep,ev,re,r,rp)
 		Duel.Tap(tc,REASON_EFFECT)
 	end
 	if Duel.GetShieldCount(tp)<=2 then
-		Duel.SendDecktoptoSZone(tp,1)
+		Duel.SendDecktoSZone(tp,1)
 	end
 end

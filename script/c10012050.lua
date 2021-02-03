@@ -12,7 +12,7 @@ function scard.thfilter(c)
 end
 function scard.tg1(e,tp,eg,ep,ev,re,r,rp,chk)
 	if chk==0 then return true end
-	local b1=Duel.IsPlayerCanSendDecktoptoMZone(tp,1)
+	local b1=Duel.IsPlayerCanSendDecktoMZone(tp,1)
 	local b2=Duel.IsExistingMatchingCard(aux.ManaZoneFilter(scard.thfilter),tp,LOCATION_MZONE,0,1,nil)
 	local option_list={}
 	local t={}
@@ -30,7 +30,7 @@ end
 function scard.op1(e,tp,eg,ep,ev,re,r,rp)
 	local opt=e:GetLabel()
 	if opt==1 then
-		Duel.SendDecktoptoMZoneUpTo(tp,2,POS_FACEUP_UNTAPPED,REASON_EFFECT)
+		Duel.SendDecktoMZoneUpTo(tp,2,POS_FACEUP_UNTAPPED,REASON_EFFECT)
 	elseif opt==2 then
 		Duel.Hint(HINT_SELECTMSG,tp,HINTMSG_RTOHAND)
 		local g=Duel.SelectMatchingCard(tp,aux.ManaZoneFilter(scard.thfilter),tp,LOCATION_MZONE,0,0,2,nil)

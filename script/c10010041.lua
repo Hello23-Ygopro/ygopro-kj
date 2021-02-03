@@ -26,8 +26,8 @@ function scard.op1(e,tp,eg,ep,ev,re,r,rp)
 		Duel.SetTargetCard(g)
 		Duel.KJBanish(g,REASON_EFFECT)
 	elseif ct1<ct2 then
-		if Duel.IsPlayerCanSendDecktoptoSZone(tp,1) and Duel.SelectYesNo(tp,YESNOMSG_TOSZONE) then
-			Duel.SendDecktoptoSZone(tp,1)
+		if Duel.IsPlayerCanSendDecktoSZone(tp,1) and Duel.SelectYesNo(tp,YESNOMSG_TOSZONE) then
+			Duel.SendDecktoSZone(tp,1)
 		end
 	end
 end

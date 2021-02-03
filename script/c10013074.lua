@@ -11,8 +11,8 @@ function scard.thfilter(c)
 	return c:IsCreature() and c:IsAbleToHand()
 end
 function scard.op1(e,tp,eg,ep,ev,re,r,rp)
-	if Duel.KJIsPlayerCanSendDecktoptoDPile(tp,1) and Duel.SelectYesNo(tp,YESNOMSG_TODPILE) then
-		Duel.KJSendDecktoptoDPile(tp,1,REASON_EFFECT)
+	if Duel.KJIsPlayerCanSendDecktoDPile(tp,1) and Duel.SelectYesNo(tp,YESNOMSG_TODPILE) then
+		Duel.KJSendDecktoDPile(tp,1,REASON_EFFECT)
 	end
 	Duel.Hint(HINT_SELECTMSG,tp,HINTMSG_RTOHAND)
 	local g=Duel.SelectMatchingCard(tp,aux.KJDPileFilter(scard.thfilter),tp,LOCATION_DPILE,0,1,1,nil)

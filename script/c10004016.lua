@@ -14,7 +14,7 @@ function scard.thfilter(c,e)
 	return c:IsFaceup() and c:IsAbleToHand() and c:IsCanBeEffectTarget(e)
 end
 function scard.op1(e,tp,eg,ep,ev,re,r,rp)
-	if Duel.KJSendDecktoptoDPile(1-tp,1,REASON_EFFECT)==0 then return end
+	if Duel.KJSendDecktoDPile(1-tp,1,REASON_EFFECT)==0 then return end
 	local tc=Duel.GetOperatedGroup():GetFirst()
 	if tc:IsCreature() then
 		Duel.Hint(HINT_SELECTMSG,tp,HINTMSG_RTOHAND)

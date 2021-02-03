@@ -13,7 +13,7 @@ function scard.initial_effect(c)
 end
 --to mana zone, get ability
 function scard.op1(e,tp,eg,ep,ev,re,r,rp)
-	if Duel.SendDecktoptoMZone(tp,1,POS_FACEUP_UNTAPPED,REASON_EFFECT)==0 then return end
+	if Duel.SendDecktoMZone(tp,1,POS_FACEUP_UNTAPPED,REASON_EFFECT)==0 then return end
 	local tc=Duel.GetOperatedGroup():GetFirst()
 	if not tc:IsCivilization(CIVILIZATION_FIRE) then return end
 	local c=e:GetHandler()

@@ -10,7 +10,7 @@ function scard.initial_effect(c)
 end
 --to shield zone
 function scard.op1(e,tp,eg,ep,ev,re,r,rp)
-	Duel.SendDecktoptoSZone(tp,2)
+	Duel.SendDecktoSZone(tp,2)
 	local reset_count=(Duel.GetTurnPlayer()==tp and 2 or 1)
 	--to discard pile
 	local e1=Effect.CreateEffect(e:GetHandler())

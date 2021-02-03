@@ -16,7 +16,7 @@ function scard.tg1(e,tp,eg,ep,ev,re,r,rp,chk)
 end
 --to mana zone
 function scard.tg2(e,tp,eg,ep,ev,re,r,rp,chk)
-	if chk==0 then return Duel.IsPlayerCanSendDecktoptoMZone(tp,1) end
+	if chk==0 then return Duel.IsPlayerCanSendDecktoMZone(tp,1) end
 	Duel.Hint(HINT_OPSELECTED,1-tp,e:GetDescription())
 end
 --[[
